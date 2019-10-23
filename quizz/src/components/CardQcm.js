@@ -1,5 +1,6 @@
 import React from "react"
 import './CardQcm.css'
+import ButtonQcm from './components/ButtonQcm'
 
 class CardQcm extends React.Component {
     constructor(props){
@@ -25,10 +26,7 @@ class CardQcm extends React.Component {
         <p>{this.state.question}</p>
         <p>Choose the correct answer</p>
         <div>
-            <button>{this.state.correct_answer}</button>
-            <button>{this.state.incorrect_answer[0]}</button>
-            <button>{this.state.incorrect_answer[1]}</button>
-            <button>{this.state.incorrect_answer[2]}</button>
+            <ButtonQcm />
         </div>
 
     
