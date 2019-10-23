@@ -1,8 +1,8 @@
 import React from "react"
-import './CardQcm.css'
-import ButtonQcm from './components/ButtonQcm'
+import './CardQuestion.css'
+import ButtonQcm from './ButtonQcm'
 
-class CardQcm extends React.Component {
+class CardQuestion extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -35,4 +35,4 @@ class CardQcm extends React.Component {
 }
 }
 
-export default CardQcm
+export default CardQuestion;

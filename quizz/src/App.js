@@ -1,12 +1,12 @@
 import React from 'react';
-import CardQcm from './CardQcm';
+import CardQuestion from './components/CardQuestion';
 
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-     <CardQcm />
+     <CardQuestion />
     </div>
   );
 }
