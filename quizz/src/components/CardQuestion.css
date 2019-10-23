@@ -1,0 +1,16 @@
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+
+.imageContainer {
+    width: 100%;
+    margin: auto;
+}
+
+.imageCategory {
+    max-width: 50%;
+}
