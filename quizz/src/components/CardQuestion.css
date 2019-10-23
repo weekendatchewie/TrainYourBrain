@@ -6,11 +6,11 @@
 
 
 
-figure {
+.imageContainer {
     width: 100%;
     margin: auto;
 }
 
-img {
+.imageCategory {
     max-width: 50%;
 }

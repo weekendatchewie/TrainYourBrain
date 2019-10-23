@@ -19,8 +19,8 @@ class CardQuestion extends React.Component {
     render() {
     return (
     <div className='cardContent'>
-        <figure>
-            <img alt=''  src="http://data-cache.abuledu.org/512/logo-de-la-geographie-504bb9b4.jpg"></img>
+        <figure className='imageContainer'>
+            <img className='imageCategory' alt='category'  src="http://data-cache.abuledu.org/512/logo-de-la-geographie-504bb9b4.jpg"></img>
         </figure>
        
         <p>{this.state.question}</p>
