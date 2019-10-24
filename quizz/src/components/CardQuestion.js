@@ -2,6 +2,7 @@ import React from "react"
 import './CardQuestion.css'
 import ButtonQcm from './ButtonQcm'
 
+
 class CardQuestion extends React.Component {
     constructor(props){
         super(props);
@@ -11,11 +12,12 @@ class CardQuestion extends React.Component {
             correct_answer : 'Quatar',
             incorrect_answer :{
                 0: 'Kuwait',
-                1:'United Arab Emirate',
+                1: 'United Arab Emirate',
                 2: 'Jordan'
             }
         };
     }
+   
     render() {
     return (
     <div className='cardContent'>
@@ -26,13 +28,14 @@ class CardQuestion extends React.Component {
         <p>{this.state.question}</p>
         <p>Choose the correct answer</p>
         <div>
-            <ButtonQcm />
+            <ButtonQcm correct_answer ='Quatar' incorrect_answer = {[
+                 'Kuwait',
+                 'United Arab Emirate',
+                 'Jordan'
+            ]}/>
         </div>
-
-    
     </div>
     )
-}
-}
+}}
 
 export default CardQuestion;

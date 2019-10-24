@@ -4,4 +4,14 @@
     background-color: white;
     border: solid 2px blueviolet;
     margin: 5px;
+    cursor: pointer;
+}
+
+.qcmButton:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+#winImage{
+    display: none;
 }
