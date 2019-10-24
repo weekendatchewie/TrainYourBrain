@@ -18,12 +18,26 @@ class ButtonQcm extends React.Component {
     <div className='cardContent'>
     
         <div>
-            <button className='qcmButton' >{this.state.correct_answer}</button>
-            <button className='qcmButton'>{this.state.incorrect_answer[0]}</button>
+            <button 
+            onClick={event => 
+                { console.log("Good answer")}}                  
+            className='qcmButton' >{this.state.correct_answer}</button>
+
+            <button
+            onClick={event => 
+                { console.log("Wrong answer")}}        
+            className='qcmButton'>{this.state.incorrect_answer[0]}</button>
         </div>
         <div>
-            <button className='qcmButton'>{this.state.incorrect_answer[1]}</button>
-            <button className='qcmButton'>{this.state.incorrect_answer[2]}</button>
+            <button 
+            onClick={event => 
+                { console.log("Wrong answer")}}
+            className='qcmButton'>{this.state.incorrect_answer[1]}</button>
+
+            <button
+            onClick={event => 
+                { console.log("Wrong answer")}}
+            className='qcmButton'>{this.state.incorrect_answer[2]}</button>
         </div>
 
     
