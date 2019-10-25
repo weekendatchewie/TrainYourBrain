@@ -8,7 +8,7 @@ function ButtonBool(props)  {
     <div>
       <button 
         onClick={event => 
-          {(props.correct_answer === 'True')? console.log("Good answer") : console.log("Wrong answer")} 
+          {(props.correct_answer === 'True')? alert("Good answer") : alert("Wrong answer")} 
           }
           className='qcmButton'>Right
       </button>
@@ -16,7 +16,7 @@ function ButtonBool(props)  {
         
       <button
         onClick={event => 
-          {(props.incorrect_answer[0] === 'True')? console.log("Good answer") : console.log("Wrong answer")} 
+          {(props.incorrect_answer[0] === 'True')? alert("Good answer") : alert("Wrong answer")} 
           } 
           className='qcmButton'>Wrong
       </button>

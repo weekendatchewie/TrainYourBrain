@@ -15,7 +15,7 @@ class CardQuestionBool extends React.Component {
     }
     render() {
     return (
-    <div className='cardContent' id="cardContentBool">
+    <div className='cardContent'>
         <figure className='imageContainer'>
             <img className='imageCategory' alt='category'  src="https://cdn.pixabay.com/photo/2016/08/15/08/22/greece-1594689_960_720.jpg"></img>
         </figure>

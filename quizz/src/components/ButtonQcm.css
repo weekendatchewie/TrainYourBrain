@@ -4,4 +4,28 @@
     background-color: white;
     border: solid 2px blueviolet;
     margin: 5px;
+    cursor: pointer;
+    box-shadow:3px 3px 5px grey;
+}
+
+.qcmButton:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+#winImage{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.winLogo , .lostLogo{
+    width: 40%;
+}
+#lostImage {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
