@@ -1,39 +1,75 @@
 import React from "react"
 import './ButtonQcm.css'
 import ButtonMask from './ButtonMask'
-
-function LostQcm(idShow) {
-    document.getElementById(idShow).style.display = 'flex'
-}
+import WinMask from "./WinMask"
+import LostMask from './LostMask'
 
 
-function ButtonQcm (props)  { 
-    console.log(props.correct_answer)    
+    function LostQcm(idShow,idHide,buttonLost) {
+        document.getElementById(idShow).style.display = 'flex'
+        document.getElementById(idHide).style.display = 'none'
+        document.getElementById(buttonLost).style.backgroundColor = 'blueviolet'
+
+    }
+
+
+    function ButtonQcm (props)  { 
+        console.log(props.correct_answer)
+        console.log(props.incorrect_answer)
+    
+   
+    
+    function winClick() {
+        {props.correct_answer?ButtonMask('winImage','lostImage', 'winButton'):LostQcm('lostImage')}
+        props.incrementScore()
+        
+      }
+
+    function nextQuestion() {
+        props.getQuestions()
+        WinMask('winImage','winButton')
+        LostMask('lostImage', 'lostButton')
+    }
+
+
     return (   
         
     <div className='cardContent'>
   
         <div>
-            <button onClick={event =>props.correct_answer==='Quatar'?ButtonMask('winImage','winButton'):LostQcm('lostImage')}
-                id='winButton' className='qcmButton'>{props.correct_answer}</button>
+            <button onClick={winClick}
+                id='winButton' className='qcmButton'>{props.correct_answer}
+            </button>
 
-            <button onClick={event =>props.correct_answer===true?ButtonMask('winImage','winButton'):LostQcm('lostImage')} 
-            className='qcmButton'>{props.incorrect_answer[0]}</button>
+            <button onClick={event =>props.correct_answer===true?
+                ButtonMask('winImage','winButton'):
+                LostQcm('lostImage','winImage', 'lostButton1')} 
+                className='qcmButton lostButton' id='lostButton1'>{props.incorrect_answer[0]}
+            </button>
         </div>
+
         <div>
-            <button onClick={event =>
-                {alert("Wrong answer")}} className='qcmButton'>{props.incorrect_answer[1]}</button>
-            <button onClick={event =>
-                {alert("Wrong answer")}} className='qcmButton'>{props.incorrect_answer[2]}</button>
-        </div>   
+            <button onClick={event =>props.correct_answer===true?
+                ButtonMask('winImage','winButton'):
+                LostQcm('lostImage','winImage', 'lostButton2')}
+                className='qcmButton lostButton' id='lostButton2'>{props.incorrect_answer[1]}
+            </button>
+
+            <button onClick={event =>props.correct_answer===true?
+                ButtonMask('winImage','winButton'):
+                LostQcm('lostImage','winImage', 'lostButton2')}
+                className='qcmButton lostButton' id='lostButton3'>{props.incorrect_answer[2]}
+            </button>
+        </div> 
+
         <div className='imageWin' id='winImage'>
-             <img className='winLogo' src={"https://i.ibb.co/CBvyV07/Gagne1.png"} alt="Gagne" ></img> 
-             <div><button className='qcmButton'  >Next question</button>
+             <img className='winLogo' src={"https://i.ibb.co/bFwKdvc/gagne.png"} alt="Win" ></img> 
+             <div><button onClick={nextQuestion} className='qcmButton'  >Next question</button>
              </div>    
         </div> 
         <div className='imageLost' id='lostImage'>
-             <img className='lostLogo' src={"https://i.ibb.co/ZMyr8Vp/lost-svg.png"} alt="Gagne" ></img> 
-             <div><button className='qcmButton'  >Next question</button>
+             <img className='lostLogo' src={"https://i.ibb.co/w6WWNRy/lost.png"} alt="Lost" ></img> 
+             <div><button onClick={nextQuestion} className='qcmButton'  >Next question</button>
              </div>    
         </div> 
     </div>
@@ -43,4 +79,4 @@ function ButtonQcm (props)  {
 
 
  export default ButtonQcm;
- 
+

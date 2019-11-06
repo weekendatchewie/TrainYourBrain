@@ -4,12 +4,11 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-   
 }
 
-#cardContentBool {
+/* #cardContentBool {
     display : none;
-}
+} */
 
 #cardContentQcm, #cardContentQcm1 {
     display: none;
@@ -17,9 +16,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    
 }
-
 
 .imageContainer {
     width: 100%;
@@ -30,7 +27,6 @@
 
 .imageCategory {
     max-width: 50%;
-   
 }
 
 .ligneSection {
@@ -39,6 +35,7 @@
     background-color:  #ffc800;
     border: none;
     width: 40%;
-
 }
+
 p{text-align: center;}
+

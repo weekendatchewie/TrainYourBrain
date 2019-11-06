@@ -1,7 +1,7 @@
 import React from 'react'
 import Category from './Category'
 import './Category.css'
-
+import ChoixQfmVF from './ChoixQfmVF';
 
 const category = [
     {
@@ -25,13 +25,18 @@ const category = [
 ];
 
 
-const ListCategory = () => (
+const ListCategory = (props) => (
     <div className='ListCategory' id='ListCat'>
+        <p>last chosen: {props.lastChosenCategory}</p>
         {category.map(item => (
-            <Category name={item.name} image={item.image}/>
+            
+            <Category name={item.name} image={item.image} />       
+            
         ))}
     </div>
 );
 
 export default ListCategory;
 
+
+       //     <ChoixQfmVF name={this.props.name} image={this.props.image} />

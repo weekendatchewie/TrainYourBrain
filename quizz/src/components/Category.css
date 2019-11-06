@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
-    border: 2px solid black;
+    
     margin: 15px;
     width: 30%;
     box-shadow: 5px 5px 10px rgb(177, 175, 175);
@@ -14,7 +14,6 @@
 .category-img {
     
     width: 100%;
-    border-radius: 5px ;
     opacity: 0.6;
 }
 

@@ -2,14 +2,26 @@ import React from "react"
 import './CardQuestion.css'
 import './ButtonQcm.css'
 import MaskButton from './Maskbutton';
+import ListCategory from './ListCategory'
+import Category from './Category'
 
 class ChoixQfmVF extends React.Component {
-  
+    
+    constructor (props) {
+    super (props)
+    this.state = {
+        selected: this.props.isSelected,
+        category: ''
+    };
+}
+
+
+
   render() {
   return (
   <div id="cardContentQcm1">
-      <figure className='imageContainer'>
-          <img className='imageCategory' alt='category'  src="https://image.noelshack.com/fichiers/2019/43/5/1572034087-image1-1.jpg"></img>
+      <figure className='all-category'>
+      <img className="category-img" src={this.props.image} alt={this.props.category}></img>
       </figure>
      
       
