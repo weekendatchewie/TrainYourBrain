@@ -1,16 +1,41 @@
 .cardContent {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
 }
 
+/* #cardContentBool {
+    display : none;
+} */
 
+#cardContentQcm, #cardContentQcm1 {
+   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
 .imageContainer {
     width: 100%;
     margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .imageCategory {
     max-width: 50%;
 }
+
+.ligneSection {
+    color: #ffc800;
+    height: 0.2em;
+    background-color:  #ffc800;
+    border: none;
+    width: 40%;
+}
+
+p{text-align: center;}
+

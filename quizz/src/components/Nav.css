@@ -1,0 +1,7 @@
+.Nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color:#ffc800 ;
+    color: white;
+    padding: 5px 20px 5px 5px;
+}
