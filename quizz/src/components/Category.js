@@ -1,9 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    Link,
+    Route,
+    Switch,
+  } from 'react-router-dom';
 import './Category.css';
-import CardQuestionBool from './CardQuestionBool.js'
-import MaskButton from './Maskbutton';
-import ChoixQfmVF from './ChoixQfmVF';
+
 
 
 class Category extends React.Component {

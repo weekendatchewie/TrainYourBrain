@@ -6,6 +6,7 @@
     margin: 5px;
     cursor: pointer;
     box-shadow:3px 3px 5px grey;
+    word-wrap: wrap;
 }
 
 .qcmButton:hover {
@@ -13,19 +14,57 @@
     color: white;
 }
 
-#winImage{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+.winButton {
+    background-color: #ffc800;
+    border: 2px #ffc800;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    padding:  5px 10px 5px 10px;
+    box-shadow:3px 3px 5px grey;
+    word-wrap: wrap;
+
 }
+
+.lostButton {
+    border-radius: 15px;
+    padding:  5px 10px 5px 10px;
+    background-color: blueviolet;
+    color: white;
+    border: solid 2px blueviolet;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow:3px 3px 5px grey;
+    word-wrap: wrap;
+
+}
+
 .winLogo , .lostLogo{
     width: 40%;
+    float: left;
 }
-#lostImage {
-    display: none;
+
+.imageWin {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+}
+
+.imageLost {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.noImage{
+    display: none;
+}
+#winButton {
+    order: 2;
+}
+
+.button-order {
+    display: flex;
 }

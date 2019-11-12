@@ -1,12 +1,16 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import './Nav.css'
 
-    const Nav = () => {
+    class Nav extends React.Component {
+        render() {
         return (
         <div className='Nav'>
-            <h3><i className="fas fa-cogs"></i>TrainYourBrain</h3>
+           
+           <Link to="/"  style={{textDecoration: 'none'}}><h3><i className="fas fa-cogs"></i>TrainYourBrain</h3></Link>
+           
         </div>
-        )}
+        )}}
 
 
 export default Nav

@@ -6,12 +6,12 @@
     margin-bottom: 20px;
 }
 
-/* #cardContentBool {
+#cardContentBool {
     display : none;
-} */
+}
 
-#cardContentQcm, #cardContentQcm1 {
-   
+#cardContentQcm {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -27,6 +27,7 @@
 
 .imageCategory {
     max-width: 50%;
+    
 }
 
 .ligneSection {
@@ -37,5 +38,12 @@
     width: 40%;
 }
 
-p{text-align: center;}
+.cardContent p {
+    text-align: center;
+    padding: 8 px;
+}
+
+.questionNumber {
+    margin-top: 80px;
+}
 
