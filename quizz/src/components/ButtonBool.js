@@ -9,24 +9,33 @@ class ButtonBool extends React.Component {
           win: false,
           lost: false,
       }
-  } 
+      this.checkWin = this.checkWin.bind(this)
+  }
+  
+  checkTrue() {
+    (this.props.correct_answer === 'True')
+      ? this.setState({win: true})
+      : this.setState({lost: true})
+  }
+  
+  checkFalse() {
+    (this.props.incorrect_answer[0] === 'True')
+      ? this.setState({win: true})
+      : this.setState({lost: true})
+  }
   
   render() {
   return (
   <div className='cardContent'>
     <div>
       <button 
-        onClick={event => 
-          {(this.props.correct_answer === 'True')?this.setState({win: true}):this.setState({lost: true}) }
-          }
+        onClick={this.checkWin}
           className='qcmButton'>True
       </button>
 
         
       <button
-        onClick={event => 
-          {(this.props.incorrect_answer[0] === 'True')?this.setState({win: true}):this.setState({lost: true})} 
-          } 
+        onClick={this.checkFalse} 
           className='qcmButton'>False
       </button>
 
