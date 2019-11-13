@@ -1,14 +1,25 @@
 import React from 'react';
-import CardQuestion from './components/CardQuestion';
+import Routes from './components/Routes';
 
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-     <CardQuestion />
-    </div>
-  );
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+    
+  }
+
+  render() {
+    return (
+      <div className="App">
+        
+        <Routes/>
+
+      </div>
+    );
+  }
 }
 
 export default App;

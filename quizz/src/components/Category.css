@@ -1,0 +1,39 @@
+.all-category {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 15px;
+    width: 30%;
+    box-shadow: 5px 5px 10px rgb(177, 175, 175);
+    margin-top: 80px;
+    
+}
+
+.category-img {
+    
+    width: 100%;
+    opacity: 0.6;
+}
+
+.category-img:hover {
+    
+    opacity: 1;
+    cursor: pointer;
+}
+
+.name-category {
+   
+    margin: 10px;
+    font-size: 18px;   
+    
+}
+
+.ListCategory {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
