@@ -4,7 +4,7 @@ import './Question.css'
 function Question(props) {
     return(
         <div className='question'>
-            <p>{props.question}</p>
+            <p>{props.question.replace(/&quot;|&#039;/g,"'").replace(/amp;/g,'')}</p>
         </div>
     )
 }

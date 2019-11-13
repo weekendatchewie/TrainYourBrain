@@ -31,26 +31,25 @@ import './ButtonQcm.css'
         <div className= 'button-order'>
             <button
                 onClick={event =>{this.setState({win: true});this.props.incrementScore();}}
-                // id='winButton'
                 style={{ order: this.state.buttonWinOrder }}
                 className={this.state.win||this.state.lost?'winButton':'qcmButton'}
             >
-                {this.props.correct_answer}
+                {this.props.correct_answer.replace(/&quot;|&#039;/g,"'").replace(/amp;/g,'')}
             </button>
 
             <button onClick={event =>this.setState({lost: true})} 
-                className={this.state.lost?'lostButton':'qcmButton'} >{this.props.incorrect_answer[0]}
+                className={this.state.lost?'lostButton':'qcmButton'} >{this.props.incorrect_answer[0].replace(/&quot;|&#039;/g,"'").replace(/amp;/g,'')}
             </button>
         
         
         
             <button onClick={event =>this.setState({lost: true})}
-                className={this.state.lost?'lostButton':'qcmButton'} >{this.props.incorrect_answer[1]}
+                className={this.state.lost?'lostButton':'qcmButton'} >{this.props.incorrect_answer[1].replace(/&quot;|&#039;/g,"'").replace(/amp;/g,'')}
             </button>
 
             <button onClick={event =>this.setState({lost: true})}
             
-                className={this.state.lost?'lostButton':'qcmButton'} >{this.props.incorrect_answer[2]}
+                className={this.state.lost?'lostButton':'qcmButton'} >{this.props.incorrect_answer[2].replace(/&quot;|&#039;/g,"'").replace(/amp;/g,'')}
             </button>
 
         </div> 

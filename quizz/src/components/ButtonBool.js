@@ -12,12 +12,14 @@ class ButtonBool extends React.Component {
   } 
   
   render() {
+    console.log(this.state.win)
   return (
   <div className='cardContent'>
     <div>
       <button 
         onClick={event => 
-          {(this.props.correct_answer === 'True')?this.setState({win: true}):this.setState({lost: true}) }
+          {(this.props.correct_answer === 'True')?this.setState({win: true}):this.setState({lost: true});
+          (this.props.correct_answer === 'True') && this.props.incrementScore()} 
           }
           className='qcmButton'>True
       </button>
@@ -25,7 +27,8 @@ class ButtonBool extends React.Component {
         
       <button
         onClick={event => 
-          {(this.props.incorrect_answer[0] === 'True')?this.setState({win: true}):this.setState({lost: true})} 
+          {(this.props.incorrect_answer[0] === 'True')?this.setState({win: true}):this.setState({lost: true});
+          (this.props.incorrect_answer[0]) === 'True' && this.props.incrementScore()} 
           } 
           className='qcmButton'>False
       </button>
@@ -37,7 +40,7 @@ class ButtonBool extends React.Component {
              <div><button onClick={event =>{this.setState({win: false, lost :false});{this.props.getQuestions()};{this.props.incrementQuestionNumber()}}}
              className='qcmButton'  >Next question</button></div>    
         </div> 
-        <div className={this.state.lost?'imageLost':'noImage'}>
+        <div className={this.state.lost?'imageLost':'noImage'}> 
              <img className='lostLogo' src={"https://i.ibb.co/w6WWNRy/lost.png"} alt="Lost" ></img> 
              
              <div><button onClick={event =>{this.setState({win: false, lost: false});{this.props.getQuestions()};{this.props.incrementQuestionNumber()}}} className='qcmButton'>Next question</button>
