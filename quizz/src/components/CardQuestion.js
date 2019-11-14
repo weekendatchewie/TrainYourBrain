@@ -27,7 +27,7 @@ class CardQuestion extends React.Component {
 
     getQuestions() {
         axios
-            .get(`https://opentdb.com/api.php?amount=1&category=${this.props.location.state.categoryId}&difficulty=easy&type=multiple`)
+            .get(`https://opentdb.com/api.php?amount=1&Token=1234&category=${this.props.location.state.categoryId}&difficulty=easy&type=multiple`)
             .then(response => response.data)
             .then(data => {this.setState({arrayQuestions: data.results});});	
     }

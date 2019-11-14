@@ -1,8 +1,7 @@
-import React from 'react';
-import Category from './Category';
-import './Category.css';
-import Nav from './Nav';
-import Footer from './Footer';
+import React from 'react'
+import Category from './Category'
+import './Category.css'
+import Nav from './Nav'
 
 const category = [   
     {   id : 23,
@@ -76,10 +75,8 @@ const ListCategory = (props) => (
         
             <Category className='ListCategory' key={item.id} name={item.name} image={item.image} id={item.id} />       
             
-        
-            
         ))}</span>
-
+    
     </div>
 );
 

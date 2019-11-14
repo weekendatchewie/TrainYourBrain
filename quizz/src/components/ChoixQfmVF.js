@@ -5,7 +5,6 @@ import './ChoixQfmVF.css'
 import Category from './Category'
 import { Link } from 'react-router-dom'
 
-
 class ChoixQfmVF extends React.Component {
     constructor(props) {
         super(props)
@@ -14,7 +13,6 @@ class ChoixQfmVF extends React.Component {
   render() {
       console.log(this.props)
   return (
-        
     <div id="cardContentQcm1">
        
         
@@ -26,7 +24,8 @@ class ChoixQfmVF extends React.Component {
         
         <div className='cardContent'>
             
-       <div>     
+            
+            <div>
             
        <Link to={{pathname:"/question",
                 state: {categoryImage:this.props.location.state.categoryImage, categoryName:this.props.location.state.categoryName, categoryId: this.props.location.state.categoryId}}}>
@@ -38,15 +37,10 @@ class ChoixQfmVF extends React.Component {
                
                 <button className='qcmButton'>True-False</button>
         </Link>
-        
-        </div>
-        
+            </div>
         </div>  
 
-
-
     </div>
-
   )}}   
 
   
