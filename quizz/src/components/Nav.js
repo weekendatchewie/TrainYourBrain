@@ -7,7 +7,7 @@ import './Nav.css'
         return (
         <div className='Nav'>
            
-           <Link to="/"  style={{textDecoration: 'none'}}><h3><i className="fas fa-cogs"></i>TrainYourBrain</h3></Link>
+           <Link to="/"  style={{textDecoration: 'none'}}><h3 className="trainYourBrain"><i className="fas fa-cogs"></i>TrainYourBrain</h3></Link>
            
         </div>
         )}}
