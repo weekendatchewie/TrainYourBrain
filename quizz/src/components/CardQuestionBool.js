@@ -45,8 +45,6 @@ class CardQuestionBool extends React.Component {
     }  
    
     render() {
-        console.log(this.state.arrayQuestions)
-        console.log(this.props.location.state.categoryImage, this.props.location.state.categoryName)
     return (
         
     <div className='cardContent' >
