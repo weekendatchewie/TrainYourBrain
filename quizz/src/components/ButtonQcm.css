@@ -42,21 +42,21 @@
 }
 
 .winLogo , .lostLogo{
-    width: 30%;
+    width: 100%;
 }
 
 .imageWin {
-    position:fixed;
-    top: 60px;
-    left:18px;
+    position: absolute;
+    top: 80px;
+    left:12px;
     transform: rotate(-20deg);
 
 }
 
 .imageLost {
-    position:fixed;
-    top: 60px;
-    left:18px;
+    position:absolute;
+    top: 80px;
+    left:12px;
     transform: rotate(-20deg);
 }
 .noImage{

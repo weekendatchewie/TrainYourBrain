@@ -7,6 +7,7 @@ import Question from './Question'
 import QuestionNumber from './QuestionNumber'
 
 
+
 class CardQuestion extends React.Component {
     constructor(props){
         super(props);
@@ -69,8 +70,8 @@ class CardQuestion extends React.Component {
         </div>}
             )}
         </div>
-
        
+      
 
     </div>
     )
