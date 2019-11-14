@@ -1,4 +1,4 @@
-.qcmButton{
+.qcmButton, #qcmButtonF, #qcmButtonT{
     border-radius: 15px;
     padding:  5px 10px 5px 10px;
     background-color: white;
@@ -6,26 +6,80 @@
     margin: 5px;
     cursor: pointer;
     box-shadow:3px 3px 5px grey;
+    word-wrap: wrap;
 }
+
+
 
 .qcmButton:hover {
     background-color: blueviolet;
     color: white;
 }
 
-#winImage{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+.winButton, #winButtonT, #winButtonF {
+    background-color: #ffc800;
+    border: 2px #ffc800;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    padding:  5px 10px 5px 10px;
+    box-shadow:3px 3px 5px grey;
+    word-wrap: wrap;
+
 }
+
+
+
+
+.lostButton, #lostButtonT, #lostButtonF {
+    border-radius: 15px;
+    padding:  5px 10px 5px 10px;
+    background-color: blueviolet;
+    color: white;
+    border: solid 2px blueviolet;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow:3px 3px 5px grey;
+    word-wrap: wrap;
+
+}
+
 .winLogo , .lostLogo{
     width: 40%;
+    float: left;
 }
-#lostImage {
-    display: none;
+
+.imageWin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imageLost {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.noImage{
+    display: none;
+}
+.button-order {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+/* .button-order :nth-child(1) { 
+    order: 3; } */
+/* #winButton {
+    order: 3;
+} */
+.button-order :nth-child(2) { 
+    order: 1; }
+.button-order :nth-child(3) { 
+    order: 2; }
+.button-order :nth-child(4) { 
+    order: 3; }

@@ -1,43 +1,48 @@
 import React from "react"
 import './CardQuestion.css'
 import './ButtonQcm.css'
-import MaskButton from './Maskbutton';
-import ListCategory from './ListCategory'
+import './ChoixQfmVF.css'
 import Category from './Category'
+import { Link } from 'react-router-dom'
 
 class ChoixQfmVF extends React.Component {
+    constructor(props) {
+        super(props)
+    }
     
-    constructor (props) {
-    super (props)
-    this.state = {
-        selected: this.props.isSelected,
-        category: ''
-    };
-}
-
-
-
   render() {
+      console.log(this.props)
   return (
-  <div id="cardContentQcm1">
-      <figure className='all-category'>
-      <img className="category-img" src={this.props.image} alt={this.props.category}></img>
-      </figure>
-     
-      
-      <p>Tu es plotôt QCM ou Vrai-Faux ?</p>
-      <div className='cardContent'  >
-          <div>
-            <button onClick={event =>
-                MaskButton ('cardContentQcm1', 'cardContentQcm')} className='qcmButton'>QCM</button>
-            <button onClick={event =>
-                MaskButton ('cardContentQcm1', 'cardContentBool')} className='qcmButton'>True-False</button>
-          </div>
-     </div>  
+    <div id="cardContentQcm1">
+       
+        
+        
+        <Category name={this.props.location.state.categoryName} image={this.props.location.state.categoryImage} /> 
+        
+        <p>You prefer QCM or True False ?</p>
+        
+        
+        <div className='cardContent'>
+            
+            
+            <div>
+            
+       <Link to={{pathname:"/question",
+                state: {categoryImage:this.props.location.state.categoryImage, categoryName:this.props.location.state.categoryName, categoryId: this.props.location.state.categoryId}}}>
+                <button className='qcmButton'>QCM</button>
+        </Link> 
 
-  </div>
+        <Link to={{pathname:"/questionbool",
+                state: {categoryImage:this.props.location.state.categoryImage, categoryName:this.props.location.state.categoryName, categoryId: this.props.location.state.categoryId}}}>
+               
+                <button className='qcmButton'>True-False</button>
+        </Link>
+            </div>
+        </div>  
+
+    </div>
   )}}   
-
 
   
   export default ChoixQfmVF;
+  

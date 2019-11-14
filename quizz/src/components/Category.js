@@ -1,9 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    Link,
+    Route,
+    Switch,
+  } from 'react-router-dom';
 import './Category.css';
-import CardQuestionBool from './CardQuestionBool.js'
-import MaskButton from './Maskbutton';
-import ChoixQfmVF from './ChoixQfmVF'
+
+
 
 class Category extends React.Component {
     constructor (props) {
@@ -17,16 +21,17 @@ class Category extends React.Component {
 render () {
     return (
     
-       
+   
             <figure className='all-category'>
+    <Link to={{pathname:"/choiceQuestion",
+                state: {categoryImage:this.props.image, categoryName:this.props.name, categoryId:this.props.id}}}>
+            <img className="category-img" src={this.props.image} alt={this.props.name} />
             
-            <Link to={`/categories/${this.props.name}`}><img className="category-img" src={this.props.image} alt={this.props.name} /*onClick={event=> MaskButton ('ListCat', 'cardContentQcm1')  
-            }*/ /></Link>
-            
+    </Link>       
             <figcaption className='name-category'>{this.props.name}</figcaption>
 
             </figure>
-           
+    
    
     )
 }

@@ -4,6 +4,8 @@ import './CardQuestion.css'
 import ButtonQcm from './ButtonQcm'
 import ScoreQcm from './ScoreQcm'
 import Question from './Question'
+import QuestionNumber from './QuestionNumber'
+
 
 class CardQuestion extends React.Component {
     constructor(props){
@@ -11,10 +13,13 @@ class CardQuestion extends React.Component {
         this.state = {
             arrayQuestions: [],
             count: 0,
-        }
+            questionNumber: 1,
+    }
         this.incrementScore = this.incrementScore.bind(this)  
-        this.getQuestions = this.getQuestions.bind(this) 
-            };
+        this.getQuestions = this.getQuestions.bind(this)
+        this.incrementQuestionNumber = this.incrementQuestionNumber.bind(this)
+        
+    }
 
     componentDidMount() {
 	    this.getQuestions();
@@ -22,47 +27,55 @@ class CardQuestion extends React.Component {
 
     getQuestions() {
         axios
-            .get('https://opentdb.com/api.php?amount=1&category=18&difficulty=easy&type=multiple')
+            .get(`https://opentdb.com/api.php?amount=1&category=${this.props.location.state.categoryId}&difficulty=easy&type=multiple`)
             .then(response => response.data)
             .then(data => {this.setState({arrayQuestions: data.results});});	
-        }
+    }
+
+    incrementQuestionNumber() {
+        this.setState({
+            questionNumber: this.state.questionNumber + 1
+        })
+    }  
 
     incrementScore() {
         this.setState({
             count: this.state.count + 10
         })
-        }  
+    }  
    
     render() {
         console.log(this.state.arrayQuestions)
+        console.log(this.props.location.state.categoryImage, this.props.location.state.categoryName)
     return (
         
     <div className='cardContent'id="cardContentQcm">
-        
+        <div className='questionNumber'><QuestionNumber questionNumber={this.state.questionNumber}/></div>
         <figure className='imageContainer'>
-            <img className='imageCategory' alt='category'  src="http://data-cache.abuledu.org/512/logo-de-la-geographie-504bb9b4.jpg"></img>
+            <img className='imageCategory' alt='category'  
+            src={this.props.location.state.categoryImage}></img>
         </figure>
 
         <hr className='ligneSection'></hr>
 
         <ScoreQcm count={this.state.count}/>
 
-        {this.state.arrayQuestions.map(quest => <Question question = {quest.question}/>)}
+        {this.state.arrayQuestions.map(quest => <span key={quest.question}  ><Question question = {quest.question}/></span>)}
 
         <p>Choose the correct answer</p>
 
         <div id='buttonQcmContainer'>
             {this.state.arrayQuestions.map(q => 
-                {console.log(q) ;
-                    return <ButtonQcm correct_answer = {q.correct_answer} incorrect_answer = {q.incorrect_answers} 
-                    incrementScore = {this.incrementScore} getQuestions={this.getQuestions}/>}
-           
-             )}
-            
+            {return <div key={q.category}><ButtonQcm correct_answer = {q.correct_answer} incorrect_answer = {q.incorrect_answers} 
+            key={q.category} incrementScore = {this.incrementScore} getQuestions={this.getQuestions} incrementQuestionNumber={this.incrementQuestionNumber}/>
+        </div>}
+            )}
         </div>
-        
+
+       
+
     </div>
     )
 }}
 
-export default CardQuestion;
+export default CardQuestion
