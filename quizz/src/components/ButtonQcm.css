@@ -46,7 +46,7 @@
 }
 
 .imageWin {
-    position:fixed;
+    position: absolute;
     top: 60px;
     left:18px;
     transform: rotate(-20deg);
@@ -54,7 +54,7 @@
 }
 
 .imageLost {
-    position:fixed;
+    position: absolute;
     top: 60px;
     left:18px;
     transform: rotate(-20deg);
@@ -68,7 +68,6 @@
     align-items: center;
     justify-content: center;
 }
-
 .button-order :nth-child(2) { 
     order: 1; }
 .button-order :nth-child(3) { 

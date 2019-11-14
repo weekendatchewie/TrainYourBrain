@@ -45,6 +45,7 @@ class CardQuestion extends React.Component {
     }  
    
     render() {
+        
     return (
         
     <div className='cardContent'id="cardContentQcm">

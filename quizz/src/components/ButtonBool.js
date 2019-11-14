@@ -17,19 +17,22 @@ class ButtonBool extends React.Component {
   checkTrue() {
     (this.props.correct_answer === 'True')
       ? this.setState({win: true})
-      : this.setState({lost: true})
+      : this.setState({lost: true});
+      (this.props.correct_answer === 'True') && this.props.incrementScore()
+      
   }
   
   checkFalse() {
     (this.props.incorrect_answer[0] === 'True')
       ? this.setState({win: true})
-      : this.setState({lost: true})
+      : this.setState({lost: true});
+      (this.props.incorrect_answer[0] === 'True') && this.props.incrementScore()
   }
 
   nextQuestion() {
     this.setState({win: false, lost :false});
     this.props.getQuestions();
-    this.props.incrementQuestionNumber()
+    this.props.incrementQuestionNumber()  
   }
   
   render() {
