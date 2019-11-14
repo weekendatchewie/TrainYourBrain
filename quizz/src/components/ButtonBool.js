@@ -13,9 +13,9 @@ class ButtonBool extends React.Component {
           winF: false,
           lostF: false
       }
-        this.checkTrue = this.checkTrue.bind(this)
-        this.checkFalse = this.checkFalse.bind(this)
-        this.nextQuestion = this.nextQuestion.bind(this)
+      this.checkTrue = this.checkTrue.bind(this)
+      this.checkFalse = this.checkFalse.bind(this)
+      this.nextQuestion = this.nextQuestion.bind(this)
   } 
    
   
@@ -49,12 +49,12 @@ class ButtonBool extends React.Component {
     <div>
       <button 
         onClick={this.checkTrue} className='qcmButton'
-         id={this.state.winT?'winButtonT':'qcmButton'&& this.state.lostT? 'lostButtonT':'qcmButton'}>True
+         id={this.state.winT?'winButtonT':'qcmButtonT'&& this.state.lostT? 'lostButtonT':'qcmButtonT'}>True
       </button>
 
       <button
         onClick={this.checkFalse} className='qcmButton'
-         id={this.state.winF ? 'winButtonF':'qcmButton' && this.state.lostF ? 'lostButtonF':'qcmButton'}>False
+         id={this.state.winF ? 'winButtonF':'qcmButtonF' && this.state.lostF ? 'lostButtonF':'qcmButtonF'}>False
       </button>
     </div>
 
