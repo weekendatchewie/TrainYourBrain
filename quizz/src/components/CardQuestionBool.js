@@ -1,13 +1,13 @@
 import React from "react"
 import axios from "axios"
 import './CardQuestion.css'
-import ButtonQcm from './ButtonQcm'
 import ScoreQcm from './ScoreQcm'
 import Question from './Question'
+import ButtonBool from './ButtonBool'
 import QuestionNumber from './QuestionNumber'
 
 
-class CardQuestion extends React.Component {
+class CardQuestionBool extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -27,7 +27,7 @@ class CardQuestion extends React.Component {
 
     getQuestions() {
         axios
-            .get(`https://opentdb.com/api.php?amount=1&Token=1234&category=${this.props.location.state.categoryId}&difficulty=easy&type=multiple`)
+            .get(`https://opentdb.com/api.php?amount=1&Token=3456&&category=${this.props.location.state.categoryId}&difficulty=easy&type=boolean`)
             .then(response => response.data)
             .then(data => {this.setState({arrayQuestions: data.results});});	
     }
@@ -47,7 +47,7 @@ class CardQuestion extends React.Component {
     render() {
     return (
         
-    <div className='cardContent'id="cardContentQcm">
+    <div className='cardContent' >
         <div className='questionNumber'><QuestionNumber questionNumber={this.state.questionNumber}/></div>
         <figure className='imageContainer'>
             <img className='imageCategory' alt='category'  
@@ -60,20 +60,18 @@ class CardQuestion extends React.Component {
 
         {this.state.arrayQuestions.map(quest => <span key={quest.question}  ><Question question = {quest.question}/></span>)}
 
-        <p>Choose the correct answer</p>
+        <p>True or False ?</p>
 
         <div id='buttonQcmContainer'>
             {this.state.arrayQuestions.map(q => 
-            {return <div key={q.category}><ButtonQcm correct_answer = {q.correct_answer} incorrect_answer = {q.incorrect_answers} 
+            {return <div key={q.category}><ButtonBool correct_answer = {q.correct_answer} incorrect_answer = {q.incorrect_answers} 
             key={q.category} incrementScore = {this.incrementScore} getQuestions={this.getQuestions} incrementQuestionNumber={this.incrementQuestionNumber}/>
         </div>}
             )}
         </div>
 
-       
-
     </div>
     )
 }}
 
-export default CardQuestion
+export default CardQuestionBool
