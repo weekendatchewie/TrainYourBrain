@@ -1,4 +1,4 @@
-.qcmButton, #qcmButtonF, #qcmButtonT{
+.qcmButton {
     border-radius: 15px;
     padding:  5px 10px 5px 10px;
     background-color: white;
@@ -8,7 +8,6 @@
     box-shadow:3px 3px 5px grey;
     word-wrap: wrap;
 }
-
 
 
 .qcmButton:hover {
@@ -27,8 +26,6 @@
     word-wrap: wrap;
 
 }
-
-
 
 
 .lostButton, #lostButtonT, #lostButtonF {
@@ -72,11 +69,7 @@
     align-items: center;
     justify-content: center;
 }
-/* .button-order :nth-child(1) { 
-    order: 3; } */
-/* #winButton {
-    order: 3;
-} */
+
 .button-order :nth-child(2) { 
     order: 1; }
 .button-order :nth-child(3) { 

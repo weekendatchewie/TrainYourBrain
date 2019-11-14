@@ -23,11 +23,13 @@ render () {
     
    
             <figure className='all-category'>
+                
     <Link to={{pathname:"/choiceQuestion",
                 state: {categoryImage:this.props.image, categoryName:this.props.name, categoryId:this.props.id}}}>
             <img className="category-img" src={this.props.image} alt={this.props.name} />
             
-    </Link>       
+    </Link> 
+     
             <figcaption className='name-category'>{this.props.name}</figcaption>
 
             </figure>
