@@ -21,8 +21,8 @@ class Category extends React.Component {
 render () {
     return (
     
-   
-            <figure className='all-category'>
+        
+            <figure className='all-category' >
     <Link to={{pathname:"/choiceQuestion",
                 state: {categoryImage:this.props.image, categoryName:this.props.name, categoryId:this.props.id}}}>
             <img className="category-img" src={this.props.image} alt={this.props.name} />
@@ -31,6 +31,8 @@ render () {
             <figcaption className='name-category'>{this.props.name}</figcaption>
 
             </figure>
+    
+       
     
    
     )

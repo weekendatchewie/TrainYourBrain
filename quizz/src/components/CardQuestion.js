@@ -4,7 +4,6 @@ import './CardQuestion.css'
 import ButtonQcm from './ButtonQcm'
 import ScoreQcm from './ScoreQcm'
 import Question from './Question'
-import ButtonBool from './ButtonBool'
 import QuestionNumber from './QuestionNumber'
 
 

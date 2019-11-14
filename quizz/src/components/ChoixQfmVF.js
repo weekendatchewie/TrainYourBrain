@@ -5,14 +5,16 @@ import './ChoixQfmVF.css'
 import Category from './Category'
 import { Link } from 'react-router-dom'
 
+
 class ChoixQfmVF extends React.Component {
     constructor(props) {
         super(props)
     }
     
   render() {
-      console.log(this.props.categoryId)
+      console.log(this.props)
   return (
+        
     <div id="cardContentQcm1">
        
         
@@ -24,19 +26,29 @@ class ChoixQfmVF extends React.Component {
         
         <div className='cardContent'>
             
-            
-            <div>
+       <div>     
             
        <Link to={{pathname:"/question",
                 state: {categoryImage:this.props.location.state.categoryImage, categoryName:this.props.location.state.categoryName, categoryId: this.props.location.state.categoryId}}}>
                 <button className='qcmButton'>QCM</button>
-        </Link>        
+        </Link> 
+
+        <Link to={{pathname:"/questionbool",
+                state: {categoryImage:this.props.location.state.categoryImage, categoryName:this.props.location.state.categoryName, categoryId: this.props.location.state.categoryId}}}>
+               
                 <button className='qcmButton'>True-False</button>
-            </div>
+        </Link>
+        
+        </div>
+        
         </div>  
 
+
+
     </div>
+
   )}}   
 
   
   export default ChoixQfmVF;
+  

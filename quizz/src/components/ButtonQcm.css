@@ -9,6 +9,8 @@
     word-wrap: wrap;
 }
 
+
+
 .qcmButton:hover {
     background-color: blueviolet;
     color: white;
@@ -61,10 +63,20 @@
 .noImage{
     display: none;
 }
-#winButton {
-    order: 2;
-}
-
 .button-order {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
+/* .button-order :nth-child(1) { 
+    order: 3; } */
+/* #winButton {
+    order: 3;
+} */
+.button-order :nth-child(2) { 
+    order: 1; }
+.button-order :nth-child(3) { 
+    order: 2; }
+.button-order :nth-child(4) { 
+    order: 3; }
