@@ -81,6 +81,3 @@ const ListCategory = (props) => (
 );
 
 export default ListCategory;
-
-
-//     <ChoixQfmVF name={this.props.name} image={this.props.image} />

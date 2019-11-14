@@ -47,18 +47,18 @@
 }
 
 .imageWin {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 60px;
+    left:18px;
+    transform: rotate(-20deg);
 
 }
 
 .imageLost {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 60px;
+    left:18px;
+    transform: rotate(-20deg);
 }
 .noImage{
     display: none;
@@ -69,7 +69,6 @@
     align-items: center;
     justify-content: center;
 }
-
 .button-order :nth-child(2) { 
     order: 1; }
 .button-order :nth-child(3) { 

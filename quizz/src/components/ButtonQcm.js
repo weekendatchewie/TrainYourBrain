@@ -81,7 +81,7 @@ import './ButtonQcm.css'
              <img className='lostLogo' src={"https://i.ibb.co/99nLRBf/lost.png"} alt="Lost" ></img> 
              
         </div> 
-        <div><button onClick={this.nextQuestion}>Next question</button></div>    
+        <div><button className="qcmButton" onClick={this.nextQuestion}>Next question</button></div>    
     </div>
     )   
  }
