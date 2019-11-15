@@ -58,14 +58,15 @@ class ButtonBool extends React.Component {
       </button>
     </div>
 
-    <div className={this.state.win?'imageWin':'noImage'} >
-      <img className='winLogo' src={"https://i.ibb.co/bFwKdvc/gagne.png"} alt="Win" ></img>         
+    <div className={this.state.win?'imageWin':'noImage'}>
+      <img className='winLogo' src={"https://i.ibb.co/Pzgh2rx/good-answer-smiley.png"} alt="Win" ></img>         
     </div> 
     <div className={this.state.lost?'imageLost':'noImage'}> 
-      <img className='lostLogo' src={"https://i.ibb.co/w6WWNRy/lost.png"} alt="Lost" ></img>    
+      <img className='lostLogo' src={"https://i.ibb.co/3BkyqKX/bad-answer-smiley.png"} alt="Lost" ></img>    
     </div> 
     <div>
-      <button onClick={this.nextQuestion} className='qcmButton'>Next question</button>
+      <button onClick={this.nextQuestion}
+      className={this.state.lost||this.state.win?'qcmButton':'noImage'}>Next question</button>
     </div>
   </div>
   )

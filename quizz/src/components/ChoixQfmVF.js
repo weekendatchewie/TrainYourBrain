@@ -11,11 +11,10 @@ class ChoixQfmVF extends React.Component {
     }
     
   render() {
-      console.log(this.props)
   return (
     <div id="cardContentQcm1">
        
-        
+        <div className='margin-choiceQcm'></div>
         
         <Category name={this.props.location.state.categoryName} image={this.props.location.state.categoryImage} /> 
         

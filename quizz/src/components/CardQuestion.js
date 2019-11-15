@@ -7,6 +7,7 @@ import Question from './Question'
 import QuestionNumber from './QuestionNumber'
 
 
+
 class CardQuestion extends React.Component {
     constructor(props){
         super(props);
@@ -49,12 +50,14 @@ class CardQuestion extends React.Component {
     return (
         
     <div className='cardContent'id="cardContentQcm">
+        <div>
         <div className='questionNumber'><QuestionNumber questionNumber={this.state.questionNumber}/></div>
         <figure className='imageContainer'>
             <img className='imageCategory' alt='category'  
             src={this.props.location.state.categoryImage}></img>
+            <figcaption>{this.props.location.state.categoryName}</figcaption>
         </figure>
-
+        </div>
         <hr className='ligneSection'></hr>
 
         <ScoreQcm count={this.state.count}/>
@@ -70,8 +73,8 @@ class CardQuestion extends React.Component {
         </div>}
             )}
         </div>
-
        
+      
 
     </div>
     )

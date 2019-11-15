@@ -22,11 +22,16 @@
     width: 100%;
     margin: auto;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+}
+.imageContainer figcaption {
+    margin-top: 10px;
 }
 
 .imageCategory {
-    max-width: 78%;
+    max-width: 75%;
     
 }
 
