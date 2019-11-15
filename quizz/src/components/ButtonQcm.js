@@ -13,6 +13,7 @@ import './ButtonQcm.css'
             this.nextQuestion = this.nextQuestion.bind(this)
             this.checkWin = this.checkWin.bind(this)
             this.checkLost = this.checkLost.bind(this)
+            this.buttonWinOrder = this.buttonWinOrder.bind(this)
         }
 
         buttonWinOrder() {
@@ -33,7 +34,8 @@ import './ButtonQcm.css'
         nextQuestion() {
             this.setState({win: false, lost :false});
             this.props.getQuestions();
-            this.props.incrementQuestionNumber()
+            this.props.incrementQuestionNumber();
+            this.buttonWinOrder();
           }
 
         componentDidMount() {
@@ -41,7 +43,7 @@ import './ButtonQcm.css'
             } 
 
     render() {
-       
+       console.log(this.state.buttonWinOrder)
     return (   
         
     <div className='cardContent'>
@@ -88,3 +90,5 @@ import './ButtonQcm.css'
 }
 
 export default ButtonQcm;
+
+

@@ -31,7 +31,7 @@ class ButtonBool extends React.Component {
   nextQuestion() {
     this.setState({win: false, lost :false});
     this.props.getQuestions();
-    this.props.incrementQuestionNumber()
+    this.props.incrementQuestionNumber()  
   }
   
   render() {

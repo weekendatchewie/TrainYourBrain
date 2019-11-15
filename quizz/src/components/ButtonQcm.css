@@ -63,10 +63,11 @@
     display: none;
 }
 .button-order {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    grid-template-columns: 1fr 1fr;
 }
 
 .button-order :nth-child(2) { 

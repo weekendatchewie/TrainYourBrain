@@ -46,15 +46,17 @@ class CardQuestion extends React.Component {
     }  
    
     render() {
+        
     return (
         
     <div className='cardContent'id="cardContentQcm">
+        <div>
         <div className='questionNumber'><QuestionNumber questionNumber={this.state.questionNumber}/></div>
         <figure className='imageContainer'>
             <img className='imageCategory' alt='category'  
             src={this.props.location.state.categoryImage}></img>
         </figure>
-
+        </div>
         <hr className='ligneSection'></hr>
 
         <ScoreQcm count={this.state.count}/>
