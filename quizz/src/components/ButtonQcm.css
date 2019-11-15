@@ -1,4 +1,4 @@
-.qcmButton{
+.qcmButton, #qcmButtonT, #qcmButtonF {
     border-radius: 15px;
     padding:  5px 10px 5px 10px;
     background-color: white;
@@ -7,16 +7,16 @@
     cursor: pointer;
     box-shadow:3px 3px 5px grey;
     word-wrap: wrap;
+    color: black;
 }
-
 
 
 .qcmButton:hover {
-    background-color: blueviolet;
-    color: white;
+    background-color: blueviolet !important;
+    color: white !important;
 }
 
-.winButton {
+.winButton, #winButtonT, #winButtonF {
     background-color: #ffc800;
     border: 2px #ffc800;
     margin: 5px;
@@ -28,7 +28,8 @@
 
 }
 
-.lostButton {
+
+.lostButton, #lostButtonT, #lostButtonF {
     border-radius: 15px;
     padding:  5px 10px 5px 10px;
     background-color: blueviolet;

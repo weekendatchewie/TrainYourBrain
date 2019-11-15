@@ -52,6 +52,7 @@ class CardQuestionBool extends React.Component {
         <figure className='imageContainer'>
             <img className='imageCategory' alt='category'  
             src={this.props.location.state.categoryImage}></img>
+            <figcaption>{this.props.location.state.categoryName}</figcaption>
         </figure>
 
         <hr className='ligneSection'></hr>

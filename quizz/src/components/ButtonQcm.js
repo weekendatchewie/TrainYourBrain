@@ -43,7 +43,6 @@ import './ButtonQcm.css'
             } 
 
     render() {
-       console.log(this.state.buttonWinOrder)
     return (   
         
     <div className='cardContent'>
@@ -53,23 +52,23 @@ import './ButtonQcm.css'
                 onClick={this.checkWin}
                 style={{ order: this.state.buttonWinOrder }}
                 className={this.state.win||this.state.lost?'winButton':'qcmButton'}>
-                {this.props.correct_answer.replace(/&quot;|&#039;/g,"'").replace(/amp;/g,'')}
+                {this.props.correct_answer.replace(/&quot;|&#039;/g,"'").replace(/amp;/g,'').replace(/&eacute;/g,'é')}
             </button>
 
             <button onClick={this.checkLost} 
                 className={this.state.lost?'lostButton':'qcmButton'}>
-                {this.props.incorrect_answer[0].replace(/&quot;|&#039;/g,"'").replace(/amp;/g,'')}
+                {this.props.incorrect_answer[0].replace(/&quot;|&#039;/g,"'").replace(/amp;/g,'').replace(/&eacute;/g,'é')}
             </button>
         
             <button onClick={this.checkLost}
                 className={this.state.lost?'lostButton':'qcmButton'}>
-                {this.props.incorrect_answer[1].replace(/&quot;|&#039;/g,"'").replace(/amp;/g,'')}
+                {this.props.incorrect_answer[1].replace(/&quot;|&#039;/g,"'").replace(/amp;/g,'').replace(/&eacute;/g,'é')}
             </button>
 
             <button onClick={this.checkLost}
             
                 className={this.state.lost?'lostButton':'qcmButton'}>
-                {this.props.incorrect_answer[2].replace(/&quot;|&#039;/g,"'").replace(/amp;/g,'')}
+                {this.props.incorrect_answer[2].replace(/&quot;|&#039;/g,"'").replace(/amp;/g,'').replace(/&eacute;/g,'é')}
             </button>
 
         </div> 
@@ -90,5 +89,3 @@ import './ButtonQcm.css'
 }
 
 export default ButtonQcm;
-
-
