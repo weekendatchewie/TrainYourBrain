@@ -1,0 +1,54 @@
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#cardContentBool {
+    display : none;
+}
+
+#cardContentQcm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imageContainer {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.imageContainer figcaption {
+    margin-top: 10px;
+}
+
+.imageCategory {
+    max-width: 75%;
+    
+}
+
+.ligneSection {
+    color: #ffc800;
+    height: 0.2em;
+    background-color:  #ffc800;
+    border: none;
+    width: 40%;
+}
+
+.cardContent p {
+    text-align: center;
+    padding: 8 px;
+}
+
+.questionNumber {
+    margin-top: 80px;
+}
+

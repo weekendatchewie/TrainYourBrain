@@ -1,0 +1,10 @@
+#cardContentQcm1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.margin-choiceQcm {
+    margin-top: 80px;
+}
